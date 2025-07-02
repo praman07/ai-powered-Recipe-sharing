@@ -41,9 +41,9 @@ BUT — if the input is gibberish or unrecognizable as food, politely respond:
     if (isset($result['choices'][0]['message']['content'])) {
         echo nl2br(htmlspecialchars($result['choices'][0]['message']['content']));
     } elseif (isset($result['error'])) {
-        echo "❌ Error: " . htmlspecialchars($result['error']['message']);
+        echo " Error: " . htmlspecialchars($result['error']['message']);
     } else {
-        echo "❌ Unexpected response. Please try again.";
+        echo " Unexpected response. Please try again.";
     }
 } else {
     echo "Invalid request.";
